@@ -84,3 +84,17 @@ public class Main {
 /=	a /= b	a = a / b
 %=	a %= b	a = a % b
 
+You've learned that in Java, you need to initialize a variable after declaring it. 
+Otherwise, you'll not be able to use that. Well that's not true in all cases.
+
+If you declare a variable in the class level, that variable will be assigned a default value by the compiler.
+
+public class Main {
+	
+	// gets 0 as the value by default
+	static int age;
+
+	public static void main(String[] args) {
+		System.out.println(age); // 0
+	}
+}
