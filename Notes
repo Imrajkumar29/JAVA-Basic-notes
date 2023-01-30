@@ -1,0 +1,86 @@
+remember that the top level public class in a Java source file has to match the file name, 
+and the main function of any Java program has to be defined as public static void main(String[] args).
+
+class Main {
+  public static void main(String[] args) {
+    System.out.println("Hello world!");
+  }
+}
+
+ Java is "cross-platform" which means code written and compiled in one platform can run on any platform that has Java installed on it.
+ 
+ A Java program can be written once and run anywhere. 
+ When you compile Java code it doesn't result in binary but rather in bytecode.
+ (byte code is the class file that gets generated  on compiling the java code)
+ 
+ This bytecode is not entirely binary but it's also not human readable. In fact, your processor can't read it either.
+So instead of throwing this bytecode at the CPU, we instead run it through the Java Virtual Machine or JVM for short. 
+JVM then reads and interprets the bytecode to the CPU.
+
+JRE stands for Java Runtime Environment and JDK stands for Java Development Kit.
+
+The JRE or Java Runtime Environment packages together an implementation of the JVM along with a set of libraries required for running Java programs.
+
+The JDK, on the other hand, packages the JRE along with all the necessary libraries for developing Java programs.
+
+So if you want to run Java programs on your computer you install the JRE. If you want to develop Java programs yourself, you install the JDK. There are multiple implementation of the JDK.
+
+I hope that you understand that JRE is a superset of JVM and JDK is a superset of JRE.
+
+variables are case sensitive in java.So age and AGE are two different variables.
+
+What Are final Variables?
+A final variable in Java can be initialized only once. So if you declare a variable as final, you can not reassign it.
+
+What is Type Conversion or Casting?
+Type conversion in Java can be either "implicit" or "explicit". 
+When the compiler converts a smaller type of data to a larger one automatically, it's known as an implicit or narrowing type conversion.
+Since a double is larger than an integer, the compiler could easily perform the conversion.
+If you try to do the reverse however, you'll face  error
+
+public class Main {
+
+	public static void main(String[] args) {
+		int number1 = 8;
+		double number2 = number1;
+		
+		System.out.println(number2); // 8.0
+	}
+
+}
+
+You can also go from smaller data types to larger ones. That's called an explicit or widening type conversion.
+Previously you've seen that if you try to convert a larger data type to a smaller one, the compiler complains. 
+But when you add the (int) cast operator explicitly, you show the compiler who's boss
+
+public class Main {
+
+	public static void main(String[] args) {
+		double number1 = 8.5;
+		int number2 = (int) number1;
+		
+		System.out.println(number2); // 8
+	}
+  
+What are Wrapper Classes in Java?
+Wrapper classes can wrap around primitive datatypes and turn them into reference types.
+Wrapper classes are available for all eight primitive data types.
+
+public class Main {
+    public static void main (String[] args) {
+        Integer age = 27;
+        Double gpa = 4.8;
+
+        System.out.println(age); // 27
+        System.out.println(gpa); // 4.8
+    }
+}
+
+}
+
++=	a += b	a = a + b
+-=	a -= b	a = a - b
+*=	a *= b	a = a * b
+/=	a /= b	a = a / b
+%=	a %= b	a = a % b
+
