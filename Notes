@@ -98,3 +98,6 @@ public class Main {
 		System.out.println(age); // 0
 	}
 }
+
+Since the main method is static, it can only access static variables in the class level.
+But if you move the variable declaration inside the main method, it becomes local to that method and doesn't get any default value.
